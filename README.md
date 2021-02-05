@@ -9,4 +9,4 @@ remenber to change the folder path of your local computer otherwise you can not 
 ****************************************************************************************************
 
 #if __name__ == '__main__':
-#    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output="C:/Users/shuai.wang/PycharmProjects/loginPage/Report"))
+#    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output="C:/*****/Report"))
