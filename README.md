@@ -1,6 +1,9 @@
 # interviewProject
 interview for Hulb
 
+First
+#pip install html-testRunner
+Second
 Go to test folder and run with command with "python loginTest.py"
 then you can see a new report for the tests in the report folder
 
