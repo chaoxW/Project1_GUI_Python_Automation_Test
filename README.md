@@ -15,4 +15,4 @@ This is the Package version I use
 * selenium        3.141.0
 
 
-3. you can run the tests from command line with python test_Login.py from the path ..\test
+3. you can run the tests from command line with `python test_Login.py` from the path ..\test, the report should generate in the folder configured
