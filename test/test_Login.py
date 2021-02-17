@@ -7,25 +7,32 @@ import os
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from Lib.Pages.loginPage import loginPage
 from Lib.Pages.homePage import homePage
+from Config.config_file import config
 
 class loginPageTest(unittest.TestCase):
     driver = None
 
     @classmethod
     def setUpClass(cls):
-        cls.driver = webdriver.Chrome("../Lib/chromedriver.exe")
+        #cls.driver = webdriver.Chrome("../Lib/chromedriver.exe")
+        # add chrome driver to PATH
+        cls.driver = webdriver.Chrome()
         cls.driver.implicitly_wait(3)
         cls.driver.maximize_window()
 
+
     def test_01_loginTest_valid(self):
         driver = self.driver
-        driver.get("https://www.hudl.com/home")
-        print("open login page")
+        url = config.homePage
+        driver.get(url)
 
         login = loginPage(driver)
-        login.enter_userName("shuai.wang.kaos@gmail.com")
-        login.enter_passWord("Vg#y7SYZ5A&CFn!")
+        userName = config.userName
+        passWord = config.passWord
+        login.enter_userName(userName)
+        login.enter_passWord(passWord)
         login.click_login()
+        login.check_home_logo()
 
         homepage = homePage(driver)
         homepage.click_userMenu()
@@ -34,12 +41,12 @@ class loginPageTest(unittest.TestCase):
 
     def test_02_loginTest_invalid(self):
         driver = self.driver
-        driver.get("https://www.hudl.com/home")
-        print("open login page")
-
+        url = config.homePage
+        driver.get(url)
         login = loginPage(driver)
-        login.enter_userName("shuai.wang.kaos@gmail.com")
-        login.enter_passWord("Vg#y7SYZ5")
+        userName = config.userName
+        login.enter_userName(userName)
+        login.enter_passWord("1234")
         login.click_login()
         time.sleep(2)
         msg = login.check_invalid_login_message()

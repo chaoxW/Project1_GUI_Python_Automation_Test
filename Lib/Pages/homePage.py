@@ -8,9 +8,7 @@ class homePage():
 
     def click_userMenu(self):
         self.driver.find_element_by_xpath(self.userMenu_xpath).click()
-        print("click user menu pass")
 
     def click_logOut(self):
         driver = self.driver
         driver.find_element_by_css_selector(self.logOutLink_css_selector).click()
-        print("click logout pass")
