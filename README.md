@@ -57,6 +57,10 @@ The project has four folders to manage the project:
     * use `pip install selenium`
     * the version is selenium 3.141.0
 
+  * Install configparser
+    * use `pip install configparser`
+    * the version is configparser 5.0.1
+
   * download webdriver for Chrome (FF, IE)
     * add the drivers to the PATH C:\Users\*****\AppData\Local\Programs\Python\Python39\Scripts
 
