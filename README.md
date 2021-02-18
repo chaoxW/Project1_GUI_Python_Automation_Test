@@ -7,7 +7,7 @@
 
 # Project1 unit test for GUI automation test
 
-Use Selenium and framework unittest to make the automation test, generate the test report with HtmlTestRunner
+Use Selenium and framework unittest to make the automation test, generate the test report with HtmlTestRunner, use POM (page object module) to build the test framework.
 
 Contents:
 
